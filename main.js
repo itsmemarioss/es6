@@ -1,3 +1,4 @@
+import * as funcs from './functions';
 //classes
 
 //const e let
@@ -59,3 +60,6 @@ const user = {
 };
 
 console.log(user);
+
+
+console.log(funcs.sub(100,1));
