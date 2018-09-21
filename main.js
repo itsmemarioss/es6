@@ -63,3 +63,26 @@ console.log(user);
 
 
 console.log(funcs.sub(100,1));
+
+//async/await
+
+
+const minhaPromise = () => new Promise( (resolve, reject) => {
+  setTimeout(() => {resolve('OK')}, 2000);
+});
+
+minhaPromise().then(response => {
+  console.log(response);
+})
+.catch(err => {
+
+});
+
+
+//async function executaPromise(){
+const executaPromise = async () => {
+  const response = await minhaPromise();
+  console.log(response);
+}
+
+executaPromise();

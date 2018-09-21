@@ -1,6 +1,17 @@
-import ClasseUsuario from '../functions';
-import {idade as IdadeUsuario} from '../functions';
+import axios from 'axios';
 
-console.log(ClasseUsuario.info());
-document.getElementById('main').innerHTML='<p>'+IdadeUsuario+'</p>';
-//alert('testando');
+class Api{
+  static async getUserInfo(username){
+    try{
+      const response = await axios.get(`https://api.github.com/users/${username}`);
+      console.log(response);
+    }catch(err){
+      console.warn("erro na API");
+    }
+
+
+  }
+}
+
+
+Api.getUserInfo('sharpmario');
