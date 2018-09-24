@@ -7,9 +7,11 @@ Learning es6 with rocketseat.com.br
  * yarn
  * babel
  * webpack
+ * axios
 
  ### How to run
 
  <pre><code>
+ yarn install
  yarn dev
  </code></pre>
